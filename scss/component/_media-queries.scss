@@ -1,0 +1,53 @@
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: 768px) {
+
+    .container {
+      max-width: 1400px;
+      @include center-stylin;
+    }
+    
+    .centered {
+      @include center-stylin;
+    }
+    
+    .row {
+      flex-direction: row;
+      @include flex-keys($col-flex);
+    }
+    
+    [class^=col] {
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      align-items: center;
+    }
+    
+    [class^=col] + [class^=col] {
+      margin-left: 10px;
+    }
+    
+    .nav {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      &-link {
+        flex-basis: 100px;  
+      }
+    }
+    
+    .btn {
+      padding: 10px 30px;
+    }
+    
+    .btn + .btn {
+      margin-left: 10px;
+    }
+    
+    .logo {
+      margin-left: initial;
+      margin-right: initial;
+    }
+    
+}

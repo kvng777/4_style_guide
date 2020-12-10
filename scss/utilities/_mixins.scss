@@ -1,0 +1,62 @@
+//Button styling
+@mixin btn-stylin {
+margin-top: 15px;
+width: $width;
+color: map-get($colors,'white');
+border: none;
+padding: 10px 0;
+text-transform: uppercase;
+border-radius: 5px;
+}
+
+//Images styling
+@mixin center-stylin {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+@mixin img-space {
+margin-top: 10px;
+max-width: 100%;
+}
+
+//Theme color mapping
+@mixin theme-colors($map) {
+  @each $num-col, $color in $map{
+    &-#{$num-col} {
+    background-color: $color;
+    }
+  }
+}
+
+//Flex key mapping
+@mixin flex-keys($keys) {
+  @each $num-col-f, $flex-key in $col-flex{
+    &-#{$num-col-f} {
+      flex-basis: $flex-key ;
+    }
+  }
+}
+
+//Hover Effect  + transition
+@mixin hovering {
+  .btn:hover {
+    background-color: lighten($color, 15%);
+  }
+}
+// @mixin hover{
+//   :hover {
+//     @each $num-color,$key-color in $colors{
+//       &.#{$num-color}{
+//         background-color: black;
+//       }
+//     }
+//     }
+//   }
+
+
+
+// Created a hover effect for buttons.
+// For the effect, lighten the button's background color by 15%.
+// Add a CSS transition so that the color change fades in.

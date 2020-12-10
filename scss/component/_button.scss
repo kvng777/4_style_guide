@@ -1,0 +1,32 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+%btn {
+    @include btn-stylin;
+  }
+
+.btn {
+    @extend %btn;
+    &.default {
+    background-color: $btn-def;
+    @include hovering;
+    }
+    &.error {
+    background-color: $btn-err;
+    }
+    &.info {
+    background-color: $btn-info;
+    }
+    &.success {
+    background-color: $btn-suc;
+    }
+    &.warning {
+    background-color: $btn-warn;
+    }
+}
+     
+//btn default
+//btn success
+//btn error
+

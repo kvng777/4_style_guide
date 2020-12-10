@@ -1,0 +1,26 @@
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+
+%img {
+    @include center-stylin;
+}
+
+.img {
+    &-avatar {
+        @extend %img;
+        @include img-space;
+        max-height: 100%;
+    }
+     &-frame{
+        @extend %img;
+        @include img-space;
+        padding: 13px;
+        border: 1px solid #ccc;
+     }
+     &-logo {
+        @extend %img;
+     }
+}
+  
+

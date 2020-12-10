@@ -1,0 +1,20 @@
+/* Error: Undefined variable.
+ *    ,
+ * 45 |     background-color: lighten($color, 15%);
+ *    |                               ^^^^^^
+ *    '
+ *   scss/utilities/_mixins.scss 45:31  hovering()
+ *   scss/component/_button.scss 13:5   @import
+ *   scss/component/_index.scss 1:9     @import
+ *   scss/styles.scss 3:9               root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 45 \2502      background-color: lighten($color, 15%);\a    \2502                                ^^^^^^\a    \2575 \a   scss/utilities/_mixins.scss 45:31  hovering()\a   scss/component/_button.scss 13:5   @import\a   scss/component/_index.scss 1:9     @import\a   scss/styles.scss 3:9               root stylesheet";
+}

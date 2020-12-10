@@ -7,6 +7,7 @@
   }
 
 .btn {
+  transition: all 1s;
     @extend %btn;
     &.default {
     background-color: $btn-def;
@@ -14,19 +15,20 @@
     }
     &.error {
     background-color: $btn-err;
+    @include hovering('err');
     }
     &.info {
     background-color: $btn-info;
+    @include hovering('info');
     }
     &.success {
     background-color: $btn-suc;
+    @include hovering('suc');
     }
     &.warning {
     background-color: $btn-warn;
+    @include hovering('warn');
     }
 }
      
-//btn default
-//btn success
-//btn error
 

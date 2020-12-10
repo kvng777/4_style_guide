@@ -39,14 +39,6 @@ max-width: 100%;
   }
 }
 
-// @mixin hover-test($what) {
-//   @each $color, $keys in $colors{
-//     &.#{$color} {
-//       background-color: lighten(map-get($color, null) * 15%) ;
-//     }
-//   }
-// }
-
 // $btn-def: #51ddfc;
 // $btn-suc: #63cc82;
 // $btn-err: #e4757a;
@@ -56,26 +48,13 @@ max-width: 100%;
 
 //Hover Effect  + transition
 @mixin hovering($colorkeys) {
-  $value: map-get($btn-colors, $colorkeys);
-  $colorkeys: map-get($btn-colors, null);
-  @each $colorkeys, $key-color in $btn-colors {
-      background-color: map-get(lighten($btn-colors, $colorkeys) *15%);
+  &:hover {
+    $value: map-get($btn-colors, $colorkeys);
+    $colorkeys: map-get($btn-colors, '');
+    transition: .5s ease-in;
+    background-color: lighten(map-get($btn-colors, $colorkeys), 15%);
   }
-  // &:hover {
-  //   background-color: lighten($btn-def, 15%);
-  // }
 }
-// @mixin hover{
-//   :hover {
-//     @each $num-color,$key-color in $colors{
-//       &.#{$num-color}{
-//         background-color: black;
-//       }
-//     }
-//     }
-//   }
-
-
 
 // Created a hover effect for buttons.
 // For the effect, lighten the button's background color by 15%.

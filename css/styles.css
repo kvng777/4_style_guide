@@ -1,9 +1,9 @@
-/* Error: Undefined variable.
+/* Error: $color: ("def": #51ddfc, "suc": #63cc82, "err": #e4757a, "warn": #fd7856, "info": #927bc1) is not a color.
  *    ,
- * 45 |     background-color: lighten($color, 15%);
- *    |                               ^^^^^^
+ * 62 |       background-color: map-get(lighten($btn-colors, $colorkeys) *15%);
+ *    |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *    '
- *   scss/utilities/_mixins.scss 45:31  hovering()
+ *   scss/utilities/_mixins.scss 62:33  hovering()
  *   scss/component/_button.scss 13:5   @import
  *   scss/component/_index.scss 1:9     @import
  *   scss/styles.scss 3:9               root stylesheet */
@@ -16,5 +16,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 45 \2502      background-color: lighten($color, 15%);\a    \2502                                ^^^^^^\a    \2575 \a   scss/utilities/_mixins.scss 45:31  hovering()\a   scss/component/_button.scss 13:5   @import\a   scss/component/_index.scss 1:9     @import\a   scss/styles.scss 3:9               root stylesheet";
+  content: 'Error: $color: ("def": #51ddfc, "suc": #63cc82, "err": #e4757a, "warn": #fd7856, "info": #927bc1) is not a color.\a    \2577 \a 62 \2502        background-color: map-get(lighten($btn-colors, $colorkeys) *15%);\a    \2502                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss/utilities/_mixins.scss 62:33  hovering()\a   scss/component/_button.scss 13:5   @import\a   scss/component/_index.scss 1:9     @import\a   scss/styles.scss 3:9               root stylesheet';
 }

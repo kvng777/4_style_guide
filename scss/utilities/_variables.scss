@@ -21,16 +21,13 @@ $font-weight: 300; //headline, blockquote
 //================================|
 // $colors -----------------------|
 //================================|
-// $color-nav: #777; // nav and p
-// $color-primary: #58e1c1; //headline, blockquote, nav:hover, input border bottom
-// $color-abtn: #51ddfc; //href,btn and background
-// $color-pink: #deb2ee; //col-3
-// $color-lightblue: #7ee6fd; //col-4
-// $color-white: #fff;
-// $color-error: #e4757a;
-// $color-info:#927bc1;
-// $color-bg: #63cc82;
-// $color-warn: #fd7856;
+$btn-colors:(
+    'def': #51ddfc,
+    'suc': #63cc82,
+    'err': #e4757a,
+    'warn': #fd7856,
+    'info': #927bc1
+);
 
 
 $btn-def: #51ddfc;
@@ -52,15 +49,15 @@ $colors: (
     'warn':#fd7856
 );
 
-$color-th: (
-    'row1': #80e8d1,
-    'row2': #4da2bb,
-    'row3': #80e8d1,
-    'row4': #deb2ee,
-    'row5': #88d9a0,//#ec9fa3,
-    'row6': #fd9f85, //#7ee6fd,
-    'row7': #ec9fa3,
-);
+// $color-th: (
+//     'row1': #80e8d1,
+//     'row2': #4da2bb,
+//     'row3': #80e8d1,
+//     'row4': #deb2ee,
+//     'row5': #88d9a0,//#ec9fa3,
+//     'row6': #fd9f85, //#7ee6fd,
+//     'row7': #ec9fa3,
+// );
 
 $col-colors: (
     '1':#927bc1,

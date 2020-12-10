@@ -10,7 +10,7 @@
     @extend %btn;
     &.default {
     background-color: $btn-def;
-    @include hovering;
+    @include hovering('def');
     }
     &.error {
     background-color: $btn-err;

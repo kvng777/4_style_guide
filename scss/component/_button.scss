@@ -7,7 +7,6 @@
   }
 
 .btn {
-  transition: all .5s;
     @extend %btn;
     @include colors-hover;
 }

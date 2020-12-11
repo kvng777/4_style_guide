@@ -6,15 +6,15 @@
     .container {
       max-width: 1400px;
       @include center-stylin;
-    }
-    
-    .centered {
-      @include center-stylin;
-    }
-    
-    .row {
-      flex-direction: row;
-      @include flex-keys($col-flex);
+      .row {
+        flex-direction: row;
+        .col {
+          @include flex-keys($col-flex);
+        }
+        .centered {
+          @include center-stylin;
+        }
+      }  
     }
     
     [class^=col] {
@@ -50,4 +50,4 @@
       margin-right: initial;
     }
     
-}
+  }

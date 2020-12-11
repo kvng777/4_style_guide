@@ -39,23 +39,10 @@ max-width: 100%;
   }
 }
 
-// $btn-def: #51ddfc;
-// $btn-suc: #63cc82;
-// $btn-err: #e4757a;
-// $btn-warn: #fd7856;
-// $btn-info: #927bc1;
-
-
-//Hover Effect  + transition
-@mixin hovering($colorkeys) {
-  &:hover {
-    $value: map-get($btn-colors, $colorkeys);
-    $colorkeys: map-get($btn-colors, '');
-    transition: .5s ease-in;
-    background-color: lighten(map-get($btn-colors, $colorkeys), 15%);
-  }
-}
-
-// Created a hover effect for buttons.
-// For the effect, lighten the button's background color by 15%.
-// Add a CSS transition so that the color change fades in.
+//Hover Effect  + transition, commented out prefer option 1.
+// @mixin hovering($color) {
+//   &:hover {
+//     transition: .2s ease-in;
+//     background-color: lighten(map-get($btn-colors, $color), 15%);
+//   }
+// }

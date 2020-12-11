@@ -4,12 +4,17 @@
 
 .container {
     padding: 0 10px;
-  }
-  
-  .row {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 10px;
+      .row {
+        display: flex;
+        flex-direction: column;
+        padding: 1em 10px;
+      }
+      .card {
+        flex-basis: 100%;
+      }
+      .theme.col{
+        @include theme-colors($col-colors);
+      }
   }
   
   [class^=col] {
@@ -19,11 +24,5 @@
     padding: 10px;
     border-radius: 5px;
   }
-    
-  .card {
-    flex-basis: 100%;
-  }
 
-  .theme.col{
-    @include theme-colors($col-colors);
-  }
+

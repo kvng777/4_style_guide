@@ -9,12 +9,5 @@
 .btn {
   transition: all .5s;
     @extend %btn;
-    @each $key, $color in $btn-colors {
-      &.#{$key} {
-        background-color: $color;
-        &:hover {
-          background-color: lighten($color, 15%);
-        }
-      }
-    }
+    @include colors-hover;
 }

@@ -39,7 +39,20 @@ max-width: 100%;
   }
 }
 
-//Hover Effect  + transition, commented out prefer option 1.
+//Btn colors + Hover + Transitions
+@mixin colors-hover {
+  transition: all .5s;
+  @each $key, $color in $btn-colors {
+    &.#{$key} {
+      background-color: $color;
+      &:hover {
+        background-color: lighten($color, 15%);
+      }
+    }
+  }
+}
+
+//Hover Effect  + transition, commented out to keep this option.
 // @mixin hovering($color) {
 //   &:hover {
 //     transition: .2s ease-in;
